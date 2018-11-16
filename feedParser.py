@@ -14,7 +14,7 @@ def squidblacklist(srcURL,regPat):
 	for matchNum, match in enumerate(matches):
 		matchNum = matchNum + 1
 		
-		line = re.sub(r"^(\d[^\t]+)[^\n]+", r"\1", match.group())
+		line = re.sub(regPat, r"\1", match.group())
 		print(line)
 
 	with open('bruteforceblocker.pkl', 'wb') as f:
