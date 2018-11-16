@@ -7,6 +7,7 @@ def squidblacklist(srcURL,regPat):
 	source = requests.get(srcURL).text
 	soup = BeautifulSoup(source,'lxml')
 	match = soup.p.text
+	targetFile = 'bruteforceblocker.pkl'
 
 	test_str = match
 	
@@ -17,7 +18,7 @@ def squidblacklist(srcURL,regPat):
 		line = re.sub(regPat, r"\1", match.group())
 		print(line)
 
-	with open('bruteforceblocker.pkl', 'wb') as f:
+	with open(targetFile, 'wb') as f:
 		pickle.dump(line, f)
 	return  
 
