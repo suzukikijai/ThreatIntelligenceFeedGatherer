@@ -60,3 +60,5 @@ target/
 \.~lock\.patterns_url\.csv#
 
 bruteforceblocker\.pkl
+
+*.pkl
