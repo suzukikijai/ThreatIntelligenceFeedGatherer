@@ -24,5 +24,19 @@ def squidblacklist(srcURL,regPat):
 
 
 def main():
-	squidblacklist()
-	#regex = r"^(\d[^\t]+)[^\n]+"
+	with open("patterns_url.csv") as collector:
+		next(collector)
+		for line in collector: 
+			#print(line)
+			URLMatches = re.findall("^[^,]+",line)
+			for URLMatched in URLMatches:
+				url = URLMatched
+				print(url)
+			patternMatches = re.findall("[^,]+$",line)
+			for patternMatched in patternMatches:
+				patternData = patternMatched
+				print(patternData)
+			squidblacklist(url,patternData)
+            
+
+main()
