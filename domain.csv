@@ -1,0 +1,4 @@
+URL,Pattern
+http://hosts-file.net/download/hosts.txt,127.0.0.1\t([^\n]+)
+http://data.netlab.360.com/feeds/dga/dga.txt,^[^\t]+\t([^\t]+)([^\n]+)
+http://mirror1.malwaredomains.com/files/domains.txt,[\t]+([^\t]+)\t([^\n]+)
