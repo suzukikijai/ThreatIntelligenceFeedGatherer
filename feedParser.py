@@ -8,7 +8,7 @@ def squidblacklist(srcURL,regPat,targetFile = 'output.pkl'):
 	soup = BeautifulSoup(source,'lxml')
 	match = soup.p.text
 	test_str = match
-	endMesg = "Feed gathering for" + re.sub("https?://([^/]+)[^\n]+",r"\1",srcURL) + " from " + re.sub("^[^\n]+/([^/]+)",r"\1",srcURL)  + " completed."
+	endMesg = "Feed gathering for" + re.sub("^[^\n]+/([^/]+)",r"\1",srcURL)  +  " from " + re.sub("https?://([^/]+)[^\n]+",r"\1",srcURL) + " completed."
 	matches = re.finditer(regPat, test_str, re.MULTILINE)
 	try:
 		for matchNum, match in enumerate(matches):
@@ -41,7 +41,8 @@ def main():
 				for patternMatched in patternMatches:
 					patternData = patternMatched
 					# print(patternData)
-				print(squidblacklist(url,patternData))
+				filename = re.sub("^[^\n]+/([^/]+)",r"\1",url)  +  " - " + re.sub("https?://([^/]+)[^\n]+",r"\1",url) + ".pkl"
+				print(squidblacklist(url,patternData,filename))
 	except Exception as e:
 		print(e)
 	return "Completed all feeds"
