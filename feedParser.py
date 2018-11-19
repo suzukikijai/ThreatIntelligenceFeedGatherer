@@ -14,10 +14,14 @@ def feedExtractor(srcURL,regPat,targetFile = 'output.pkl'):
 		for matchNum, match in enumerate(matches):
 			matchNum = matchNum + 1
 			data = re.sub(regPat, r"\1", match.group())
-			# print(data)
+			print(data)
 		try:
 			with open(targetFile, 'wb') as f:
-				pickle.dump(data, f)
+				if data == "":
+					print("ERROR::::: NO DATA RECIEVED")
+				else:
+					pickle.dump(data, f)
+
 			return endMesg
 		except Exception as e:
 			print("Feed extractor write error: " + str(e))
