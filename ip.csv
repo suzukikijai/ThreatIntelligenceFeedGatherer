@@ -17,10 +17,10 @@ http://dataplane.org/sshclient.txt,[^\n]+(\d+\.\d+\.\d+\.\d+)[^\n]+
 http://dataplane.org/sshpwauth.txt,[^\n]+(\d+\.\d+\.\d+\.\d+)[^\n]+
 https://osint.bambenekconsulting.com/feeds/c2-ipmasterlist.txt,[^\n]*(\d+\.\d+\.\d+\.\d+)[^\n]*
 https://www.nothink.org/honeypot_dns_attacks.txt,[^\n]+(\d+\.\d+\.\d+\.\d+)[^\n]+
-https://lists.blocklist.de/lists/bots.txt,.*
-https://lists.blocklist.de/lists/bruteforcelogin.txt,.*
-https://lists.blocklist.de/lists/ftp.txt,.*
-https://lists.blocklist.de/lists/imap.txt,.*
-https://lists.blocklist.de/lists/ircbot.txt,.*
-https://lists.blocklist.de/lists/mail.txt,.*
-https://malc0de.com/bl/BOOT,.*
+https://lists.blocklist.de/lists/bots.txt,^(.*)$
+https://lists.blocklist.de/lists/bruteforcelogin.txt,^(.*)$
+https://lists.blocklist.de/lists/ftp.txt,^(.*)$
+https://lists.blocklist.de/lists/imap.txt,^(.*)$
+https://lists.blocklist.de/lists/ircbot.txt,^(.*)$
+https://lists.blocklist.de/lists/mail.txt,^(.*)$
+https://malc0de.com/bl/BOOT,^(.*)$
