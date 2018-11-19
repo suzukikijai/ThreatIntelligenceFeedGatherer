@@ -2,3 +2,9 @@ URL,Pattern
 http://hosts-file.net/download/hosts.txt,127.0.0.1\t([^\n]+)
 http://data.netlab.360.com/feeds/dga/dga.txt,^[^\t]+\t([^\t]+)([^\n]+)
 http://mirror1.malwaredomains.com/files/domains.txt,[\t]+([^\t]+)\t([^\n]+)
+http://security-research.dyndns.org/pub/malware-feeds/ponmocup-infected-domains-CIF-latest.txt,/+\s([^\s]+)([^\n]+)
+http://vxvault.net/URL_List.php,(http+[^\n]+)
+https://lists.blocklist.de/lists/bots.txt,"zone ""([^""]+)[^\n]+"
+https://osint.bambenekconsulting.com/feeds/c2-dommasterlist.txt,"([^,]+),Domain[^\n]+"
+https://osint.bambenekconsulting.com/feeds/dga-feed.txt,"([^,]+),Domain[^\n]+"
+https://www.dshield.org/feeds/suspiciousdomains_High.txt,^([^#]+)
