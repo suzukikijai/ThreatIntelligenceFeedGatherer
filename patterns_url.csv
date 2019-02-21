@@ -1,2 +1,0 @@
-URL,Pattern
-http://danger.rulez.sk/projects/bruteforceblocker/blist.php,^(\d[^\t]+)[^\n]+
